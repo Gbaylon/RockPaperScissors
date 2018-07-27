@@ -9,10 +9,53 @@
 <body>
   
   <script> 
+   
+    //This code works on console - just type "computerPlay();"
     function computerPlay() { 
       let myArray = ["Rock", "Paper", "Scissors"];
       let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
       return randomItem;
+    }
+    
+/*
+    function playerPlay(' ') {
+      let myArray = ["Rock", "Paper", "Scissors"];
+      let playerChoice = myArray;
+      return playerChoice;
+    }
+*/
+    function playRound(playerSelection, computerSelection) {
+      let outcome = 'Paper' && 'Rock' 
+
+      //Cases where player wins
+      switch (outcome) {
+        case ('Scissors' && 'Paper') :
+          console.log('You win! Scissors beats paper!');
+          break;
+
+        case ('Paper' && 'Rock') :
+          console.log('You win! Paper beats rock!');
+          break;
+
+        case ('Rock' && 'Scissors') :
+          console.log('You win! Rock beats scissors!');
+          break; 
+
+        //Cases where player loses
+        case  ('Rock' && 'Paper') :
+          console.log('You lose! Paper beats rock!');
+          break;
+
+        case ('Paper' && 'Scissors') :
+          console.log('You lose! Scissors beats paper!');
+          break;
+
+        case ('Scissors' && 'Rock') :
+          console.log('You lose! Rock beats scissors!');
+          break;
+
+        }
+
     }
 
 

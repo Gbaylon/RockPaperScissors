@@ -9,30 +9,32 @@
 <body>
   
   <script> 
-   
-    //This code works on console - just type "computerPlay();"
-    function computerPlay() { 
-      let myArray = ["ROCK", "PAPER", "SCISSORS"];
-      let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
-      return randomItem;
-    }
+    function game() {
 
-    function playRound(playerSelection, computerSelection) {
+      //This code works on console - just type "computerPlay();
+      function computerPlay() { 
+        let myArray = ["ROCK", "PAPER", "SCISSORS"];
+        let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
+        return randomItem;
+      }
+
+      function playRound(playerSelection, computerSelection) {
       
-      playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
-      computerSelection = computerPlay();
+        playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
+        computerSelection = computerPlay();
 
-        if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
-            (playerSelection === 'PAPER' && computerSelection === 'ROCK') ||
-            (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')) {
-            console.log('You win!');
-        } else if ((playerSelection === 'ROCK' && computerSelection === 'PAPER') || 
+          if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
+              (playerSelection === 'PAPER' && computerSelection === 'ROCK') ||
+              (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')) {
+              console.log('You win!');
+          }  else if ((playerSelection === 'ROCK' && computerSelection === 'PAPER') || 
                   (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') ||
                   (playerSelection === 'SCISSORS' && computerSelection ===  'ROCK')) {
                   console.log('You lose!');
-                } else {
+          } else {
             console.log('Tie!')
-        }
+          }
+      }
     }
 
   </script>

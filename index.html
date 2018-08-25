@@ -9,7 +9,7 @@
 <body>
   
   <script> 
-    function game() {
+    //function game() {
 
       //This code works on console - just type "computerPlay();
       function computerPlay() { 
@@ -23,45 +23,49 @@
         playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
         computerSelection = computerPlay();
 
+
         if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
               (playerSelection === 'PAPER' && computerSelection === 'ROCK') ||
               (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')) {
-              result = 'win';
+              let result = 'win';
           }  else if ((playerSelection === 'ROCK' && computerSelection === 'PAPER') || 
                   (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') ||
                   (playerSelection === 'SCISSORS' && computerSelection ===  'ROCK')) {
-                  result = 'lose';
+                  let result = 'lose';
           }   else {
-              result = 'tie';
+              let result = 'tie';
         }
-      } 
+      //}
 
-      function checkScore () {
-        let playerScore = 0;
-        let computerScore = 0;
+      //function checkScore () {
+        //let playerScore = 0;
+        //let computerScore = 0;
+
 
         if (result = 'win') {
-            playerScore++; 
+            console.log('You win!'); 
           } else if (result = 'lose') {
-            computerScore++;
+            console.log('You lose!');
           } else {
-            playerScore++ && computerScore++;
+            console.log('It is a draw');
           }
-        //console.log('You got: ' + playerScore + ' The computer got: ' + computerScore);
       }
+      //}
 
-      computerPlay();
-      playRound();
-      checkScore();
+      //let playerScore = 0;
+      //let computerScore = 0;
+      //let result;
 
-      let playerScore = 0;
-      let computerScore = 0;
-
+      //computerPlay();
+     // playRound();
+     // checkScore();
       
-      console.log('You got: ' + playerScore + ' The computer got: ' + computerScore);
+      //console.log('You got: ' + playerScore + ' The computer got: ' + computerScore);
 
       //console.log(playerScore);
-    }
+    //}
+
+    //game();
 
 
   </script>

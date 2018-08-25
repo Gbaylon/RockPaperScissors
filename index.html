@@ -40,8 +40,8 @@
       //function checkScore () {
         //let playerScore = 0;
         //let computerScore = 0;
-
-        console.log('You picked ' + playerSelection + '.' + ' Computer picked ' + computerSelection);
+        round += 1;
+        console.log('Round ' + round + ': You picked ' + playerSelection + '.' + ' Computer picked ' + computerSelection);
 
         if (result === 'win') {
             playerScore += 1;
@@ -53,8 +53,8 @@
             console.log('Draw, no points!');
           }
 
-        round += 1;  
-        console.log('Round: ' + round + ' You: ' + playerScore + ' ' + 'Computer: ' + computerScore + '.')
+          
+        console.log('You: ' + playerScore + ' ' + 'Computer: ' + computerScore + '.')
 
         playRound();
       } 

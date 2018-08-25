@@ -23,18 +23,32 @@
         playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
         computerSelection = computerPlay();
 
-          if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
+        if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
               (playerSelection === 'PAPER' && computerSelection === 'ROCK') ||
               (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')) {
-              console.log('You win!');
+              result = 'win';
           }  else if ((playerSelection === 'ROCK' && computerSelection === 'PAPER') || 
                   (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') ||
                   (playerSelection === 'SCISSORS' && computerSelection ===  'ROCK')) {
-                  console.log('You lose!');
+                  result = 'lose';
+          }   else {
+              result = 'tie';
+        }
+      } 
+
+      function checkScore () {
+        let playerScore = 0;
+        let computerScore = 0;
+
+        if (result = 'win') {
+            playerScore++; 
+          } else if (result = 'lose') {
+            computerScore++;
           } else {
-            console.log('Tie!')
+            playerScore++ && computerScore++;
           }
       }
+
     }
 
   </script>

@@ -9,7 +9,7 @@
 <body>
   
   <script> 
-    function game() {
+    //function game() {
 
       //This code works on console - just type "computerPlay();
       function computerPlay() { 
@@ -47,9 +47,12 @@
           } else {
             playerScore++ && computerScore++;
           }
+        return playerScore && computerScore;
       }
+      
+      //console.log(playerScore);
+    //}
 
-    }
 
   </script>
 </body>

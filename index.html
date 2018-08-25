@@ -9,7 +9,7 @@
 <body>
   
   <script> 
-    //function game() {
+    function game() {
 
       //This code works on console - just type "computerPlay();
       function computerPlay() { 
@@ -17,6 +17,8 @@
         let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
         return randomItem;
       }
+
+      computerPlay();
 
       function playRound(playerSelection, computerSelection) {
       
@@ -36,6 +38,8 @@
         }
       } 
 
+      playRound();
+
       function checkScore () {
         let playerScore = 0;
         let computerScore = 0;
@@ -47,11 +51,19 @@
           } else {
             playerScore++ && computerScore++;
           }
-        console.log('You got: ' + playerScore + ' The computer got: ' + computerScore);
+        //console.log('You got: ' + playerScore + ' The computer got: ' + computerScore);
       }
+
+      checkScore();
+
+      let playerScore = 0;
+      let computerScore = 0;
+
       
+      console.log('You got: ' + playerScore + ' The computer got: ' + computerScore);
+
       //console.log(playerScore);
-    //}
+    }
 
 
   </script>

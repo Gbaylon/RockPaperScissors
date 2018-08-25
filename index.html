@@ -18,8 +18,6 @@
         return randomItem;
       }
 
-      computerPlay();
-
       function playRound(playerSelection, computerSelection) {
       
         playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
@@ -38,8 +36,6 @@
         }
       } 
 
-      playRound();
-
       function checkScore () {
         let playerScore = 0;
         let computerScore = 0;
@@ -54,6 +50,8 @@
         //console.log('You got: ' + playerScore + ' The computer got: ' + computerScore);
       }
 
+      computerPlay();
+      playRound();
       checkScore();
 
       let playerScore = 0;

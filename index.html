@@ -22,9 +22,6 @@
       
         playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
         computerSelection = computerPlay();
-        let result;
-        let playerScore = 0; 
-        let computerScore = 0;
 
 
         if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
@@ -51,15 +48,20 @@
           } else if (result === 'lose') {
             computerScore += 1;
           } else {
-            console.log('Draw');
+            console.log('Draw, no points!');
           }
-        console.log('Your score: ' + playerScore + '. ' + 'Computer score: ' + computerScore + '.')
-      }
+
+        round += 1;  
+        console.log('Round: ' + round + ' Your score: ' + playerScore + ' ' + 'Computer score: ' + computerScore + '.')
+
+        playRound();
+      } 
       //}
 
-      //let playerScore = 0;
-      //let computerScore = 0;
-      //let result;
+      let playerScore = 0;
+      let computerScore = 0;
+      let result;
+      let round = 0;
 
       computerPlay();
       playRound();

@@ -22,18 +22,19 @@
       
         playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
         computerSelection = computerPlay();
+        let result;
 
 
         if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
               (playerSelection === 'PAPER' && computerSelection === 'ROCK') ||
               (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')) {
-              let result = 'win';
+              result = 'win';
           }  else if ((playerSelection === 'ROCK' && computerSelection === 'PAPER') || 
                   (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') ||
-                  (playerSelection === 'SCISSORS' && computerSelection ===  'ROCK')) {
-                  let result = 'lose';
+                  (playerSelection === 'SCISSORS' && computerSelection===  'ROCK')) {
+                  result = 'lose';
           }   else {
-              let result = 'tie';
+              result = 'tie';
         }
       //}
 
@@ -41,14 +42,14 @@
         //let playerScore = 0;
         //let computerScore = 0;
 
-        console.log('You picked ' + playerSelection + ' Computer picked ' + computerSelection);
+        console.log('You picked ' + playerSelection + '.' + ' Computer picked ' + computerSelection);
 
-        if (result = 'win') {
+        if (result === 'win') {
             console.log('You win!'); 
-          } else if (result = 'lose') {
+          } else if (result === 'lose') {
             console.log('You lose!');
           } else {
-            console.log('It is a draw');
+            console.log('Draw');
           }
       }
       //}

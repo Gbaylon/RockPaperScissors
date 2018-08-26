@@ -60,9 +60,7 @@
       } 
       
 
-      let playerScore = 0;
-      let computerScore = 0;
-      let result;
+    
       let round = 1;
 
       for (round = 1; round < 6; round++) { 
@@ -76,7 +74,23 @@
       //console.log(playerScore);
     }
 
+    let playerScore = 0;
+    let computerScore = 0;
+    let result;
+ 
     game();
+
+
+    if (playerScore > computerScore) {
+      console.log('You are the winner!');
+    } else if (playerScore < computerScore) {
+      console.log('You lose!');
+    } else {
+      console.log('It is a tie!');
+    }
+
+
+    //NOW need to add a final statement, who won? 
 
 
   </script>
